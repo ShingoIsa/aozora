@@ -6,11 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /** リクエスト受付用コントローラ */
 @Controller
-@RequestMapping("/aozora")
 public class Request_Controller {
     
     /** 画面表示用関数 */
-    @GetMapping
+    @RequestMapping("/aozora")
     public String showScreen() {
         return "front";
     }
