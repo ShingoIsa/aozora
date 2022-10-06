@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+/**
+ * ***************************************
+ * ページ全体に関わるCSSの設定
+ * ***************************************
+ */
+html *,
+::before,
+::after {
+    box-sizing: border-box;
+}
+/* フォント */
+html {
+    font-size: 14px;
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400; /* Noto Sans JPのレギュラーウェイトを指定 */
+    background-image: url(../images/blue-sky-and-clouds_1417-1861.webp);
+}
+/* おもな太字タグのフォントウェイト設定 */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-top: 0;
+}
+/* ベースのリンクカラー */
+a {
+    color: #f30;
+}
+/* レスポンシブイメージと画像下スペース防止 */
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;/* 画像下のスペースを￥消す */
+}
+
+/* ロゴモジュール */
+.logo {
+    margin: 30px;
+}
+
+/* 決め台詞モジュール*/
+.word {
+    margin: 140px 320px 0 320px;
+}
+
+/* 会員かどうか質問モジュール */
+.question {
+    margin: 60px 0 0 550px;
+}
+
+/* コメントモジュール in メイン画面 */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;   /*要素を縦から見て真ん中配置(flexやgridの子要素にしか適用できない)*/
+    column-gap: 200px;
+}
+
+/* [はい]/[いいえ]モジュール in メインコンテナ*/
+.flex button {
+    padding: 10px 50px;
+    border-radius: 20px;
+    background-color: skyblue;
+    width: 180px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+}
