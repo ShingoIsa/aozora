@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+/**
+ * ***************************************
+ * ページ全体に関わるCSSの設定
+ * ***************************************
+ */
+html *,
+::before,
+::after {
+    box-sizing: border-box;
+}
+/* フォント */
+html {
+    font-size: 14px;
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400; /* Noto Sans JPのレギュラーウェイトを指定 */
+}
+/* おもな太字タグのフォントウェイト設定 */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-top: 0;
+}
+/* ベースのリンクカラー */
+a {
+    color: #f30;
+}
+/* レスポンシブイメージと画像下スペース防止 */
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;/* 画像下のスペースを￥消す */
+}
+
+/**
+ * ***************************************
+ * ヘッダー兼検索コンテナ
+ * ***************************************
+ */
+
+.page-search {
+    background-color: cornflowerblue;
+}
+.search-container {
+    margin: 0 auto; /* ボックスを中央寄せにしたい場合は左右をautoにする*/
+    padding: 0 20px; 
+    max-width: 1040px;
+}
+
+/* ロゴと検索ボックスをflex化 */
+.tworow {
+    display: flex;
+}
+
+.logo h1{
+    /* 画面が小さくなった時のロゴ縮小*/
+    font-size: 14px;
+}   
+
+/* ロゴの位置調整・装飾 */
+.logo h1{
+    /* 画面が小さくなった時のロゴ拡大*/
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* 検索ボックスの位置調整・装飾 */
+.search form input[type="text"]{
+margin-top: 16px;
+margin-left: 20px;
+border: 1px solid #999;
+border-radius: 4px;
+width: 260px;
+}
+
+/* 検索ボタンの位置調整・装飾 */
+.search form input[type="submit"] {
+    cursor: pointer;
+}
+
+@media(min-width: 768px) {
+    /* 画面が大きくなった時のロゴ拡大*/
+    .logo h1{
+        font-size: 28px;
+    }
+
+    /* 画面が大きくなった時の検索ボックス拡大*/
+    .search form input[type="text"] {
+        width: 460px;
+        height: 40px;
+    }
+
+    /* 画面が大きくなった時の検索ボタン拡大*/
+    .search form input[type="submit"] {
+        width: 100px; 
+        height: 40px;
+    }
+}
+
+/**
+ * ***************************************
+ * メインコンテナ
+ * ***************************************
+ */
+
+.main-container {
+    margin: 0 auto; /* ボックスを中央寄せにしたい場合は左右をautoにする*/
+    max-width: 1200px;
+}
+
+/* カード型レイアウト*/
+.picture-zone {
+    display: flex;
+}
+
+.zone-item {
+    padding: 10px;
+}
+
+.zone-item div:first-child {
+    padding-bottom: 10px;
+}
+
+/**
+ * ***************************************
+ * 登録コンテナ
+ * ***************************************
+ */
+.page-registration {
+    background-color: skyblue;
+    margin: 0 40px;
+    border-radius: 10px;
+}
+.registration-container {
+    margin: 0 auto; /* ボックスを中央寄せにしたい場合は左右をautoにする*/
+    max-width: 1200px;
+    text-align: center;
+}
+
+.module-registration h1 {
+    padding-top: 28px;
+}
+
+.module-registration button {
+    margin-bottom: 30px;
+    padding: 20px 60px;
+    border-radius: 10px;
+}
+
+/**
+ * ***************************************
+ * ボトムコンテナ
+ * ***************************************
+ */
+
+.bottom-container {
+    margin: 0 auto; /* ボックスを中央寄せにしたい場合は左右をautoにする*/
+    max-width: 1200px;
+    text-align: center;
+}
+.bottom-picture-zone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 60px;
+}
+
+.grid-item {
+    padding: 10px;
+}
+.grid-item div:first-child {
+    padding-bottom: 10px;
+}
+@media (min-width: 768px) {
+    .bottom-picture-zone {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/**
+ * ***************************************
+ * フッターコンテナ
+ * ***************************************
+ */
+
+.page-fotter {
+    background-color: black;
+    height: 200px;
+}
+
+.fotter-container p {
+    color: aqua;
+    text-align: center;
+    padding-top: 60px;
+}
