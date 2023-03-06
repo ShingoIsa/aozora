@@ -1,0 +1,121 @@
+/* complete_registration.html専用css*/
+
+@charset "utf-8";
+
+html *,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+/**
+ * ***************************************
+ * ページ全体に関わるCSSの設定
+ * ***************************************
+ */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400; /* Noto Sans JPのレギュラーウェイトを指定 */
+    width: 520px;
+    background-color: cornflowerblue;
+}
+@media (min-width: 768px) {
+    body {
+        width: 1260px;
+    }
+}
+/* おもな太字タグのフォントウェイト設定 */
+h1, h2, h3 {
+    font-weight: 700;
+    margin-top: 0;
+}
+/* レスポンシブイメージと画像下スペース防止 */
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;/* 画像下のスペースを￥消す */
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/**
+ * ***************************************
+ * パンくずリスト
+ * ***************************************
+ *
+ * パンくずリストコンテナ
+ */
+
+
+/**
+ * ***************************************
+ * メインコンテナ
+ * ***************************************
+ *
+ */
+.main-container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1040px;
+}
+/* 大見出し部分("ユーザネーム"記載部分)*/
+@media(min-width: 768px) {
+    .username-area { 
+        font-size: 32px;
+        padding-top: 80px;
+        padding-left: 400px;
+    }
+    .username-area > span:nth-child(1) { margin-right: 4px; font-weight: bold;}
+    .username-area > span:nth-child(2) { margin-right: 4px; font-weight: bold;}
+    .username-area > span:nth-child(3) { font-weight: bold;}
+}
+
+
+/* 大見出し部分("登録おめでとうございます"記載部分)*/
+@media(min-width: 768px) {
+    .appreciate-word {
+        font-size: 40px;
+        padding-left: 200px;
+        font-weight: bold;
+    }
+}
+
+/**
+ * ***************************************
+ * ボトムコンテナ
+ * ***************************************
+ *
+ */
+ .bottom-container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1040px;
+}
+/* 「トップページへ」ボタン部分*/
+@media(min-width: 768px) {
+    button {
+        margin-left: 410px;
+        margin-top: 40px;
+        width: 180px;
+        height: 60px;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+}
+
+/* "会員登録後の詳細案内"文章 */
+@media(min-width: 768px) {
+    .detail-sentence {
+        text-align: center;
+        padding-top: 40px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .detail-sentence a {
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+}

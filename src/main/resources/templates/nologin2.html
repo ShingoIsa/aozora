@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Aozoraバザ〜る</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/css/nologin2.css" rel="stylesheet">
+    <link href="/css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+<body>
+<header class="page-header">
+<div class="header-container">
+    <div class="flex">
+        <h1 id="title">Aozoraバザ〜る</h1><!--h1タグのデフォルトmarginをゼロにしても消えないmarginを消すため -->
+
+        <ul class="bc-nav">
+            <li>新規登録画面</li>
+        </ul>
+    </div>
+</div>
+</header>
+<div class="page-main">
+<div class="main-container"><!-- 尾崎君とクラス名が違う -->
+
+    <h2>新規会員登録</h2>
+
+    <form class="form" method="POST" th:action="@{insert}" th:object="${userInform_f}">
+        <p>
+            <label for="1st">姓 <font color="red" style="margin-left: 10px;">※</font></label><br>
+            <input type="text" id="1st" th:field="*{sei}">
+        </p>
+        <p>
+            <label for="2nd">名 <font color="red" style="margin-left: 10px;">※</font></label><br>
+            <input type="text" id="2nd" th:field="*{mei}">
+        </p>
+        <p>
+            <label for="3rd">メールアドレス <font color="red" style="margin-left: 10px;">※</font></label><br>
+            <input type="text" id="3rd" th:field="*{email}">
+        </p>
+        
+        <input type="submit" value="新規会員登録">
+    </form>
+</div>
+</div>
+</body>
+</html>

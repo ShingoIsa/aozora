@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/front.css" rel="stylesheet">
+    <link href="/css/normalize.css" rel="stylesheet">
+    <link href="/css/front.css" rel="stylesheet">
 </head>
 <body>
 <div class="logo">
@@ -16,7 +16,7 @@
 <div class="question">
     <h2>会員の方ですか？</h2>
 </div>
-<form method="GET" th:action="@{/separate}" class="answer">
+<form method="POST" th:action="@{/aozora/separate}" class="answer">
     <button name="judge" value="true">はい</button>
     <button name="judge" value="false">いいえ</button>
 </div>
