@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/css/normalize.css" rel="stylesheet">
+    <link href="/css/complete_registration.css" rel="stylesheet">
+</head>
+<body>
+<div class="breadcrumb">
+    <div class="bc-container">
+
+    </div>
+</div>
+<form class="page-main">
+    <div class="main-container">
+        <div class="username-area">
+            <span th:if="${sei}" th:text="${sei}"></span>
+            <!-- <span>伊佐</span> -->
+            <span th:if="${mei}" th:text="${mei}"></span>
+            <!-- <span>和美</span> -->
+            <span>様</span>
+        </div>
+        <div class="appreciate-word">
+            <p>会員登録　ありがとうございます！</p>
+        </div>
+    </div>
+    <input type="hidden" th:field="*{sei}"><!-- 登録者の値をこの画面に保持し続けたいから書いた-->
+    <input type="hidden" th:field="*{mei}"><!-- だけどこれだけじゃ保持できない-->
+</form>
+<div class="page-bottom">
+    <div class="bottom-container">
+    
+        <form>
+            <button type="submit">トップページへ</button>
+        </form>
+
+        <div class="detail-sentence">
+            ご登録メールアドレスへご確認メールをお送りしました<br>
+            万が一メールが届かない場合は、まいぺーいでご登録メールアドレスが正しいか<br>
+            ご確認ください<br>
+            <a th:href="@{back}"><i></i>マイページで確認する</a>
+
+            ご確認メールが届かない場合は、<br>
+            下記お問い合わせ窓口までで連絡ください
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

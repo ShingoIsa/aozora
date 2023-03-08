@@ -1,126 +1,42 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <title>Aozoraバザ〜る</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/nologin.css" rel="stylesheet">
+    <link href="/css/nologin.css" rel="stylesheet">
+    <link href="/css/normalize.css" rel="stylesheet">
 </head>
 <body>
-<header class="page-search">
-<div class="search-container">
-    <div class="tworow">
-        <div class="logo">
-            <h1>
-                AOZORA バザ～る
-            </h1>
-        </div>
-        <div class="search">
-            <form action="#" method="post">
-                <input type="text" name="#" placeholder="何をお探しですか？">
-                <input type="submit" value="検索">
+<header class="page-header">
+    <div class="header-container">
+        <div class="flex">
+            <div class="flex-box-1">
+                <!--h1タグのデフォルトmarginをゼロにしても消えないmarginを消すため -->
+                <h1 id="title">Aozoraバザ〜る</h1>
+            </div>
+            <form method="POST" class="flex-box-2" th:action="@{/aozora/separate2}" >
+                <button name="divide" value="true">新規会員登録</button>
+                <!-- ほんとはaタグで遷移させたい が一旦これでかいておく(URLパス知識が必要)-->
+                <button name="divide" value="false">ログイン</button>
             </form>
         </div>
     </div>
+</header>
+<div class="breadcrumb">
+    <div class="bc-container">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aspernatur fuga iusto debitis eaque eius provident libero suscipit quam! Suscipit amet dignissimos id soluta quae, veniam fuga consequuntur placeat magni!
+    </div>
 </div>
-</header><!-- 検索コンテナ終了地点(親)-->
 <div class="page-main">
-<div class="main-container">
-    <div class="picture-zone">
-        <div class="zone-item">
-            <div>
-                <a href="#"><img src="images/2d484182-8596-4d88-aa63-3d594d010d4a.webp" alt="A"></a>
-            </div>
-            <div>
-                <h2>大阪府</h2>
-            </div>
-        </div>
-        <div class="zone-item">
-            <div>
-                <a href="#"><img src="images/3ebd9381-5b7f-4760-b228-0bcd12592ebc.webp" alt="A"></a>
-            </div>
-            <div>
-                <h2>沖縄県</h2>
-            </div>
-        </div>
-        <div class="zone-item">
-            <div>
-                <a href="#"><img src="images/4f37fca8-6bce-43e7-ad07-f57ae3c13142.webp" alt="A"></a>
-            </div>
-            <div>
-                <h2>東京都</h2>
-            </div>
-        </div>
+    <div class="main-container">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aspernatur fuga iusto debitis eaque eius provident libero suscipit quam! Suscipit amet dignissimos id soluta quae, veniam fuga consequuntur placeat magni!
     </div>
 </div>
-</div><!-- メインコンテナ終了地点(親)-->
-<div class="page-registration">
-<div class="registration-container">
-    <div class="module-registration">
-        <h1>会員登録をしたら近場の商品が見つかるかも？</h1>
-
-        <button onclick="location.href='#!'">会員登録へ</button>
+<footer class="page-footer">
+    <div class="footer-container">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aspernatur fuga iusto debitis eaque eius provident libero suscipit quam! Suscipit amet dignissimos id soluta quae, veniam fuga consequuntur placeat magni!
     </div>
-</div>
-</div><!-- 登録コンテナ終了地点(親)-->
-<div class="page-bottom">
-<div class="bottom-container">
-    <div class="bottom-picture-zone">
-        <div class="grid-item">
-            <div>
-                <a href="#"><img src="images/2d484182-8596-4d88-aa63-3d594d010d4a.webp" alt="A"></a>
-            </div>
-            <div>
-                <h2>大阪府</h2>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div>
-                <a href="#"><img src="images/3ebd9381-5b7f-4760-b228-0bcd12592ebc.webp" alt="A"></a>
-            </div>
-            <div>
-                <h2>沖縄県</h2>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div>
-                <a href="#"><img src="images/4f37fca8-6bce-43e7-ad07-f57ae3c13142.webp" alt="A"></a>
-            </div>
-            <div>
-                <h2>東京都</h2>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div>
-                <a href="#"><img src="images/4f37fca8-6bce-43e7-ad07-f57ae3c13142.webp" alt="A"></a>
-            </div>
-            <div>
-                <h2>東京都</h2>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div>
-                <a href="#"><img src="images/2d484182-8596-4d88-aa63-3d594d010d4a.webp" alt="A"></a>
-            </div>
-            <div>
-                <h2>大阪府</h2>
-            </div>
-        </div>
-        <div class="grid-item">
-            <div>
-                <a href="#"><img src="images/3ebd9381-5b7f-4760-b228-0bcd12592ebc.webp" alt="A"></a>
-            </div>
-            <div>
-                <h2>沖縄県</h2>
-            </div>
-        </div>
-    </div>
-</div>
-</div><!-- ボトムコンテナ終了地点(親)-->
-<div class="page-fotter">
-<div class="fotter-container">
-    <p>株式会社AOZORA</p>
-</div>
-</div>
+</footer>
 </body>
 </html>
